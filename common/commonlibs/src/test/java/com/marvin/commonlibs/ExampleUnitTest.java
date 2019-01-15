@@ -1,4 +1,4 @@
-package com.marvin.jetpack;
+package com.marvin.commonlibs;
 
 import org.junit.Test;
 

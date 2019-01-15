@@ -1,1 +1,7 @@
-include ':app', ':tools', ':jetpack'
+include ':app'
+
+//Common
+include ':common:commonlibs',
+        ':common:tools',
+        ':common:jetpack',
+        ':common:cache'
