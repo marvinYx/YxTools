@@ -2,6 +2,7 @@ package com.marvin.jetpack.lifecycle;
 
 import android.app.Application;
 import android.content.Context;
+import android.support.annotation.VisibleForTesting;
 
 /**
  * ┏┓　   ┏┓
@@ -31,6 +32,13 @@ public class AppLifeCycle {
 
     }
 
+    /**
+     * 模拟测试使用,勿依赖此函数；
+     * 系统不一定会调用
+     *
+     * @param application
+     */
+    @VisibleForTesting
     public void onTerminate(Application application) {
     }
 

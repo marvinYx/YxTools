@@ -68,6 +68,17 @@ public class DataModel<T> {
         this.data = data;
     }
 
+    public static String status2String(@Status int statusCode) {
+        String statusStr = null;
+        if (statusCode == SUCCESS) {
+            statusStr = "SUCCESS";
+        } else if (statusCode == ERROR) {
+            statusStr = "ERROR";
+        } else if (statusCode == EMPTY) {
+            statusStr = "EMPTY";
+        }
+        return statusStr;
+    }
 
     public static final class Builder<T> {
         private int statusCode;

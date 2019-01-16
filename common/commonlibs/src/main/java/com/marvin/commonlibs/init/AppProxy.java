@@ -35,6 +35,9 @@ public class AppProxy extends AppLifeCycle {
         mAppLives.addAll(ManifestParser.parse(context));
     }
 
+    /**
+     * @param context baseContext
+     */
     @Override
     public void attachBaseContext(Context context) {
         if (mAppLives != null && mAppLives.size() > 0) {

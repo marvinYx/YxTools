@@ -2,6 +2,7 @@ package com.marvin.tools;
 
 import android.app.Application;
 import android.content.Context;
+import android.support.annotation.MainThread;
 import android.support.annotation.NonNull;
 import android.widget.Toast;
 
@@ -44,10 +45,12 @@ public final class ToastUtils {
         sReplaced = replaced;
     }
 
+    @MainThread
     public static void show(@NonNull String str) {
         show(str, 0);
     }
 
+    @MainThread
     public static void show(@NonNull String str, int Duration) {
         CheckUtils.requireNonNull(sContext, "init() must be Called!");
         sToast = sReplaced ? sToast : Toast.makeText(sContext, "", Duration);

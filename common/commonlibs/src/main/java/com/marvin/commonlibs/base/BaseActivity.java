@@ -38,7 +38,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (hasContentView) {
-            setContentView(LayoutId());
+            setContentView(layoutId());
         }
         beforeInit(savedInstanceState);
         initView(savedInstanceState);
@@ -52,7 +52,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         hasContentView = hasView;
     }
 
-    protected abstract int LayoutId();
+    protected abstract int layoutId();
 
     protected abstract void initData(Bundle savedInstanceState);
 

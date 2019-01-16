@@ -53,7 +53,7 @@ public class DataLiveData<T> extends MediatorLiveData<DataModel<T>> {
         }
     }
 
-    public void success(@NonNull T data) {
+    public void success(@Nullable T data) {
         putValue(DataModel.SUCCESS, "success", data);
     }
 

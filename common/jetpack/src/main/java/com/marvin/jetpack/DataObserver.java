@@ -1,6 +1,7 @@
 package com.marvin.jetpack;
 
 import android.arch.lifecycle.Observer;
+import android.support.annotation.CallSuper;
 import android.support.annotation.Nullable;
 
 import com.marvin.tools.LogUtils;
@@ -31,6 +32,7 @@ public interface DataObserver<T> extends Observer<DataModel<T>> {
      *
      * @param dataModel 数据实体
      */
+    @CallSuper
     @Override
     default void onChanged(@Nullable DataModel<T> dataModel) {
         if (dataModel != null && !beTaken(dataModel)) {
